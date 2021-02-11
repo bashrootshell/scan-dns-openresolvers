@@ -2,7 +2,7 @@
 
 Python3 DNS Open Resolver Scanner
 
-It was written in pure python3 and using the low level networking interface in
+It was written in pure python3 and using the low-level networking interface in
 Python's core.
 
 
