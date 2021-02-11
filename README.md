@@ -12,11 +12,17 @@ with very low latency to some known DNS servers around the globe.
 ubuntu@ubuntu:~$ ping 1.1.1.3 -c 5
 
 PING 1.1.1.3 (1.1.1.3) 56(84) bytes of data.
+
 64 bytes from 1.1.1.3: icmp_seq=1 ttl=51 time=3.37 ms
+
 64 bytes from 1.1.1.3: icmp_seq=2 ttl=51 time=3.45 ms
+
 64 bytes from 1.1.1.3: icmp_seq=3 ttl=51 time=3.34 ms
+
 64 bytes from 1.1.1.3: icmp_seq=4 ttl=51 time=3.43 ms
+
 64 bytes from 1.1.1.3: icmp_seq=5 ttl=51 time=3.43 ms
+
 
 --- 1.1.1.3 ping statistics ---
 5 packets transmitted, 5 received, 0% packet loss, time 4007ms
