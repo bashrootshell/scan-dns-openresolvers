@@ -63,3 +63,9 @@ real	0m0.036s
 user	0m0.022s
 
 sys	0m0.009s
+
+
+
+One can use this repo to fetch all IP Blocks allocated for a particular country (it's really useful):
+
+https://github.com/bashrootshell/ip-country-codes
