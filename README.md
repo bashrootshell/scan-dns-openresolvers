@@ -10,6 +10,7 @@ It's way faster than Nmap. Below is a very simple test using a high-speed networ
 with very low latency to some known DNS servers around the globe.
 
 ubuntu@ubuntu:~$ ping 1.1.1.3 -c 5
+
 PING 1.1.1.3 (1.1.1.3) 56(84) bytes of data.
 64 bytes from 1.1.1.3: icmp_seq=1 ttl=51 time=3.37 ms
 64 bytes from 1.1.1.3: icmp_seq=2 ttl=51 time=3.45 ms
