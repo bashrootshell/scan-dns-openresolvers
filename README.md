@@ -1,13 +1,13 @@
 # Python DNS Open Resolver Scanner
 
-Python3 DNS Open Resolver Scanner
+## Python3 DNS Open Resolver Scanner
 
 It was written in pure python3 and using the low-level networking interface in
 Python's core.
 
 
-It's way faster than Nmap. Below is a very simple test using a high-speed network
-with very low latency to some known DNS servers around the globe.
+**It's way faster than Nmap. Below is a very simple test using a high-speed network
+with very low latency to some known DNS servers around the globe.**
 
 ubuntu@ubuntu:~$ ping 1.1.1.3 -c 5
 
@@ -66,6 +66,6 @@ sys	0m0.009s
 
 
 
-One can use this repo to fetch all IP Blocks allocated for a particular country (it's really useful):
+## One can use this repo to fetch all IP Blocks allocated for a particular country (it's really useful):
 
 https://github.com/bashrootshell/ip-country-codes
