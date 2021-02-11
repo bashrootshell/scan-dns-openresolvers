@@ -6,7 +6,7 @@ It was written in pure python3 and using the low-level networking interface in
 Python's core.
 
 
-It's way faster than Nmap. Below is a very simple test using a high speed network
+It's way faster than Nmap. Below is a very simple test using a high-speed network
 with very low latency to some known DNS servers around the globe.
 
 ubuntu@ubuntu:~$ ping 1.1.1.3 -c 5
