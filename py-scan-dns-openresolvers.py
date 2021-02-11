@@ -3,6 +3,7 @@
 from sys import argv
 from time import time
 from ipaddress import ip_network
+from random import shuffle
 import socket as com
 
 """
@@ -36,6 +37,8 @@ elif ip_network(argv[1]).num_addresses > 1:
     iplist = [ipaddr for ipaddr in ip_network(argv[1]).hosts()]
 else:
     iplist.append(argv[1])  # only one IP address in the list
+
+shuffle(iplist)
 
 for prefix in iplist:
     try:
