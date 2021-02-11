@@ -10,6 +10,7 @@ Python's core.
 **with very low latency to some known DNS servers around the globe.**
 
 **Intended to be used with _1 argument_ (e.g. 8.8.8.8 or 10.10.0.0/16 as examples)**
+
 **If parallelism is extremely necessary, GNU parallel is highly recommended**
 
 
