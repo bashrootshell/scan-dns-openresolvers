@@ -2,12 +2,11 @@
 
 ## Python3 DNS Open Resolver Scanner
 
-It was written in pure python3 and using the low-level networking interface in
-Python's core.
+**It was written in pure python3 and using the low-level networking interface in Python's core.**
 
-**Intended to be used with _1 argument_ (e.g. 8.8.8.8 or 10.10.0.0/16 as examples)**
+**Intended to be used with _1 argument_ (e.g. 8.8.8.8 or 10.10.0.0/16 as examples.)**
 
-**If parallelism is extremely necessary, GNU parallel is highly recommended**
+**If parallelism is extremely necessary, GNU parallel is _highly_ recommended.**
 
 **It's way faster than Nmap. Below is a very simple test using a high-speed network**
 **with very low latency to some known DNS servers around the globe.**
