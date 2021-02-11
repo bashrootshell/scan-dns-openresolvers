@@ -9,6 +9,9 @@ Python's core.
 **It's way faster than Nmap. Below is a very simple test using a high-speed network
 with very low latency to some known DNS servers around the globe.**
 
+** Intended to be used with _1 argument (e.g. 8.8.8.8 or 10.10.10.0/24 as examples)**
+
+
 ubuntu@ubuntu:~$ ping 1.1.1.3 -c 5
 
 PING 1.1.1.3 (1.1.1.3) 56(84) bytes of data.
