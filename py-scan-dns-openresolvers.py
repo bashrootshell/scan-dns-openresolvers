@@ -21,7 +21,7 @@ import socket as com
 ''' set BSD socket to use a UDP datagram '''
 
 packet = com.socket(com.AF_INET, com.SOCK_DGRAM)
-packet.settimeout(0.150)
+packet.settimeout(0.150)  # adjust timout according to your network latency
 
 ''' DNS type "A" set to l.root-servers.net as hexadecimal value '''
 
