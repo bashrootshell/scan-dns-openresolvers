@@ -19,7 +19,7 @@ import socket as com
     — The Zen of Python
 """
 
-''' set UNIX socket to use a UDP datagram '''
+''' set BSD socket to use a UDP datagram '''
 packet = com.socket(com.AF_INET, com.SOCK_DGRAM)
 packet.settimeout(0.150)
 
