@@ -40,7 +40,7 @@ elif ip_network(argv[1]).num_addresses > 1:
 else:
     iplist.append(argv[1])  # only one IP address in the list
 
-shuffle(iplist)
+shuffle(iplist)  # suffle the IP list to "avoid" early detection
 
 for prefix in iplist:
     try:
@@ -48,6 +48,7 @@ for prefix in iplist:
 
         packet.sendto(bytes.fromhex(payloadhex), (str(prefix), int(53)))
         response = packet.recv(128)
+
         ''' if response contains valid DNS response with the correct
         l.root-servers.net's IP address and type A query, it's open '''
 
