@@ -31,7 +31,7 @@ iplist = []
 
 ''' check if there's an argument, and check if IP address is larger than a /32.
 if not, there's 1 IP only in the list '''
-if len(argv) < 1:
+if len(argv) == 1:
     exit("Provide a single IP Address or an IP/CIDR format as the argument.")
 elif ip_network(argv[1]).num_addresses > 1:
     iplist = [ipaddr for ipaddr in ip_network(argv[1]).hosts()]
