@@ -10,7 +10,6 @@ import socket as com
     Python DNS Open Resolver Scanner
     Originally written in 2013 in Python2. Refactored in 2021 with Python3.
     It still uses Pure Python and the Low-level networking interface.
-    It's faster than nmap dns-recursion script, even for a large CIDR network.
 
     PEP8 compliant
     “Readability counts."
@@ -21,7 +20,7 @@ import socket as com
 ''' set BSD socket to use a UDP datagram '''
 
 packet = com.socket(com.AF_INET, com.SOCK_DGRAM)
-packet.settimeout(0.150)  # adjust timout according to your network latency
+packet.settimeout(0.150)  # adjust timeout according to your network latency
 
 ''' DNS type "A" set to l.root-servers.net as hexadecimal value '''
 
@@ -38,7 +37,7 @@ if len(argv) == 1:
 elif ip_network(argv[1]).num_addresses > 1:
     iplist = [ipaddr for ipaddr in ip_network(argv[1]).hosts()]
 else:
-    iplist.append(argv[1])  # only one IP address in the list
+    iplist.append(argv[1])  # one IP address in the list
 
 shuffle(iplist)  # suffle the IP list to "avoid" early detection
 
