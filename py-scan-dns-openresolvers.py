@@ -22,24 +22,29 @@ import socket as sk
 PAYLOADHEX = 'ff0001000001000000000000016c0c726f6f\
               742d73657276657273036e65740000010001'  # "l.root-servers.net"
 
+PREFIX = argv[1] if len(argv) > 1 else 0
+
 
 def iplist():
 
     try:  # certify the IP Address format is valid
 
-        if len(argv) == 1:
+        IP_ADDR_COUNT = ip_network(PREFIX).num_addresses
+        NETWORK_HOSTS = ip_network(PREFIX).hosts()
+
+        if PREFIX == 0:
             callexit("Provide a HOST IP Address or an IP/CIDR as argument.")
-        elif ip_network(argv[1]).num_addresses > 1:
-            for ipaddr in ip_network(argv[1]).hosts():
-                yield ipaddr
-        else:
-            if '/32' in argv[1]:  # ex: 8.8.8.8/32 will become '8.8.8.8'
-                yield argv[1].split('/')[0]
+        elif IP_ADDR_COUNT > 1:
+            for IPADDRESS in NETWORK_HOSTS:
+                yield IPADDRESS
+        elif IP_ADDR_COUNT == 1:
+            if '/32' in PREFIX:  # ex: 8.8.8.8/32 will become '8.8.8.8'
+                yield PREFIX.split('/')[0]
             else:
-                yield argv[1]
+                yield PREFIX
 
     except ValueError as error:
-        print(f'Error >>> {error}')
+        print(f'iplist() function Error >>> {error}')
 
 
 for HOST in iplist():
