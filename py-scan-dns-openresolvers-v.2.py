@@ -41,15 +41,16 @@ def iplist():
 
 for HOST in iplist():
 
-    setdefaulttimeout(0.130)
+    setdefaulttimeout(0.05)
 
     try:
 
         with socket(AF_INET, SOCK_DGRAM) as packet:
 
             ''' send PAYLOADHEX to HOSTs in the list using port 53 '''
-
-            packet.sendto(bytes.fromhex(PAYLOADHEX), (str(HOST), int(53)))
+            
+            packet.connect((str(HOST), 53))
+            packet.send(bytes.fromhex(PAYLOADHEX))
             RESPONSE = packet.recv(64)
 
             ''' check if RESPONSE contains a valid DNS RESPONSE with
