@@ -50,17 +50,20 @@ for HOST in iplist():
             ''' send PAYLOADHEX to HOSTs in the list using port 53 '''
 
             packet.sendto(bytes.fromhex(PAYLOADHEX), (str(HOST), int(53)))
-            RESPONSE = packet.recv(512)
+            RESPONSE = packet.recv(64)
 
             ''' check if RESPONSE contains a valid DNS RESPONSE with
                 l.root-servers.net's IP address 199.7.83.42
                 It also checks if recursion is disabled with x81x85 flag '''
 
-            if (b'\xc0\x0c\x00\x01\x00\x01' and
-                    b'\x00\x04\xc7\x07') in RESPONSE:  # 199.7.83.42
+            if (b'\x01\x6c\x0c\x72\x6f\x6f\x74\x2d\x73' 
+                and b'\xc0\x0c\x00\x01\x00\x01' 
+                and b'\x00\x04\xc7\x07') in RESPONSE:  # 199.7.83.42
+                
                 print(f'{HOST},open,{int(time())}')
 
             elif (b'\x81\x05') in RESPONSE:  # recursion disabled on server
+                
                 print(f'{HOST},not_an_open_resolver,{int(time())}')
 
     except timeout:
