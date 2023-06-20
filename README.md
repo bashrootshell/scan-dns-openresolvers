@@ -13,23 +13,35 @@
 
 
 └─$ time sudo nmap -T5 -n -P0 -sU -p53 --open --script=dns-recursion 1.1.1.3 && time ./scan-dns-openresolvers.py 1.1.1.3
+
 Starting Nmap 7.94 ( https://nmap.org ) at 2023-06-20 17:54 UTC
+
 Nmap scan report for 1.1.1.3
+
 Host is up (0.0033s latency).
 
 PORT   STATE SERVICE
+
 53/udp open  domain
+
 |_dns-recursion: Recursion appears to be enabled
 
 Nmap done: 1 IP address (1 host up) scanned in 0.23 seconds
 
+
 real    0m0.266s
+
 user    0m0.000s
+
 sys     0m0.010s
+
 1.1.1.3,open,1687283676
 
+
 real    0m0.035s
+
 user    0m0.030s
+
 sys     0m0.000s
 
 
